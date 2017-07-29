@@ -16,11 +16,11 @@ echo -e ""
 read -p "Username : " username
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
-	echo "Username [$username] sudah ada!"
+	echo "Username [$username] Existing!"
 	exit 1
 else
 	read -p "Password [$username] : " password
-	read -p "Berapa hari akaun [$username] aktif: " AKTIF
+	read -p "How many day [$username] active: " AKTIF
 	today="$(date +"%Y-%m-%d")"
 	expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
 	useradd -M -N -s /bin/false -e $expire $username
