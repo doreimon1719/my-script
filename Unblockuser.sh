@@ -9,7 +9,7 @@ echo "==================================================================="
 echo -e "         UNBLOCK USER MENU | MENU SCRIPT BY syahz86          "
 echo "==================================================================="
 echo ""
-read -p "Username yang akan diunblock: " Nama
+read -p "What username you to unblock: " Nama
 passwd -u $Nama
 echo ""
 echo "==================================================================="
