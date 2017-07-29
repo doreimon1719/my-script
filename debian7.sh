@@ -27,7 +27,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 service ssh restart
 
 # set repo
-wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/syahz86/autoscript/master/sources.list.debian7"
+wget -O /etc/apt/sources.list "https://raw.githubusercontent.com/doreimon1719/my-script/master/sources.list.debian7"
 wget "http://www.dotdeb.org/dotdeb.gpg"
 wget "http://www.webmin.com/jcameron-key.asc"
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
@@ -65,57 +65,57 @@ apt-get install figlet
 echo "clear" >> .bashrc
 echo 'echo -e ""' >> .bashr
 echo 'echo -e ""' >> .bashrc
-echo 'figlet -k "            syahz86"' >> .bashrc
+echo 'figlet -k "            RGC-VPN"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
 echo 'echo -e "     *        Original Script By syahz86 | GollumVPN        *"' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
-echo 'echo -e ""' >> .bashrc
+echo 'echo -e " Please enter your option:  "' >> .bashrc
 
 # install webserver
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/syahz86/autoscript/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/doreimon1719/my-script/master/nginx.conf"
 mkdir -p /home/vps/public_html
 echo "<pre>Setup by syahz86 | Tester Hacker</pre>" > /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/syahz86/autoscript/master/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/doreimon1719/my-script/master/vps.conf"
 service nginx restart
 
 # install openvpn
-wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/syahz86/autoscript/master/openvpn-debian.tar"
+wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/doreimon1719/my-script/master/openvpn-debian.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/syahz86/autoscript/master/1194.conf"
+wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/doreimon1719/my-script/master/1194.conf"
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 iptables -t nat -I POSTROUTING -s 192.168.100.0/24 -o eth0 -j MASQUERADE
 iptables-save > /etc/iptables_yg_baru_dibikin.conf
-wget -O /etc/network/if-up.d/iptables "https://raw.githubusercontent.com/syahz86/autoscript/master/iptables"
+wget -O /etc/network/if-up.d/iptables "https://raw.githubusercontent.com/doreimon1719/my-script/master/iptables"
 chmod +x /etc/network/if-up.d/iptables
 service openvpn restart
 
 #konfigurasi openvpn
 cd /etc/openvpn/
-wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/syahz86/autoscript/master/client-1194.conf"
+wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/doreimon1719/my-script/master/client-1194.conf"
 sed -i $MYIP2 /etc/openvpn/client.ovpn;
 cp client.ovpn /home/vps/public_html/
 
 cd
 # install badvpn
-wget -O /usr/bin/badvpn-udpgw "https://github.com/syahz86/autoscript/raw/master/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "https://github.com/doreimon1719/my-script/raw/master/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "https://github.com/syahz86/autoscript/raw/master/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "https://github.com/doreimon1719/my-script/raw/master/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
 # install mrtg
-wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/syahz86/autoscript/master/snmpd.conf"
-wget -O /root/mrtg-mem.sh "https://github.com/syahz86/autoscript/raw/master/mrtg-mem.sh"
+wget -O /etc/snmp/snmpd.conf "https://raw.githubusercontent.com/doreimon1719/my-script/master/snmpd.conf"
+wget -O /root/mrtg-mem.sh "https://github.com/doreimon1719/my-script/raw/master/mrtg-mem.sh"
 chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -123,7 +123,7 @@ service snmpd restart
 snmpwalk -v 1 -c public localhost 1.3.6.1.4.1.2021.10.1.3.1
 mkdir -p /home/vps/public_html/mrtg
 cfgmaker --zero-speed 100000000 --global 'WorkDir: /home/vps/public_html/mrtg' --output /etc/mrtg.cfg public@localhost
-curl "https://raw.githubusercontent.com/syahz86/autoscript/master/mrtg.conf" >> /etc/mrtg.cfg
+curl "https://raw.githubusercontent.com/doreimon1719/my-script/master/mrtg.conf" >> /etc/mrtg.cfg
 sed -i 's/WorkDir: \/var\/www\/mrtg/# WorkDir: \/var\/www\/mrtg/g' /etc/mrtg.cfg
 sed -i 's/# Options\[_\]: growright, bits/Options\[_\]: growright/g' /etc/mrtg.cfg
 indexmaker --output=/home/vps/public_html/mrtg/index.html /etc/mrtg.cfg
@@ -150,7 +150,7 @@ service dropbear restart
 
 # upgrade dropbear 2017
 apt-get install zlib1g-dev
-wget https://github.com/syahz86/autoscript/raw/master/dropbear-2017.75.tar.bz2
+wget https://github.com/doreimon1719/my-script/raw/master/dropbear-2017.75.tar.bz2
 bzip2 -cd dropbear-2017.75.tar.bz2  | tar xvf -
 cd dropbear-2017.75
 ./configure
@@ -206,7 +206,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 cd
 # install squid3
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/syahz86/autoscript/master/squid3.conf"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/doreimon1719/my-script/master/squid3.conf"
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
@@ -220,30 +220,30 @@ service webmin restart
 
 # download script
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/syahz86/autoscript/master/menu.sh"
-wget -O 1 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-add.sh"
-wget -O 2 "https://raw.githubusercontent.com/syahz86/autoscript/master/trial.sh"
-wget -O 3 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-gen.sh"
-wget -O 4 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-list.sh"
-wget -O 5 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-pass.sh"
-wget -O 6 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-renew.sh"
-wget -O 7 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-del.sh"
-wget -O 8 "https://raw.githubusercontent.com/syahz86/autoscript/master/userexpired.sh"
-wget -O 9 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-expire-list.sh"
-wget -O 10 "https://raw.githubusercontent.com/syahz86/autoscript/master/delete-user-expire.sh"
-wget -O 11 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-banned.sh"
-wget -O 12 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-unbanned.sh"
-wget -O 13 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-login.sh"
-wget -O 14 "https://raw.githubusercontent.com/syahz86/autoscript/master/userlimit.sh"
-wget -O 15 "https://raw.githubusercontent.com/syahz86/autoscript/master/ps_mem.py"
-wget -O 16 "https://raw.githubusercontent.com/syahz86/autoscript/master/resvis.sh"
-wget -O 17 "https://raw.githubusercontent.com/syahz86/autoscript/master/speedtest_cli.py"
-wget -O 18 "https://raw.githubusercontent.com/syahz86/autoscript/master/benchmark.sh"
-wget -O 19 "https://raw.githubusercontent.com/syahz86/autoscript/master/info.sh"
-wget -O 20 "https://raw.githubusercontent.com/syahz86/autoscript/master/about.sh"
-wget -O 21 "https://raw.githubusercontent.com/syahz86/autoscript/master/rebootserver.sh"
-wget -O userlimit.sh "https://raw.githubusercontent.com/syahz86/autoscript/master/userlimit.sh"
-wget -O userexpired.sh "https://raw.githubusercontent.com/syahz86/autoscript/master/userexpired.sh"
+wget -O menu "https://raw.githubusercontent.com/doreimon1719/my-script/master/menu.sh"
+wget -O 1 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-add.sh"
+wget -O 2 "https://raw.githubusercontent.com/doreimon1719/my-script/master/trial.sh"
+wget -O 3 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-gen.sh"
+wget -O 4 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-list.sh"
+wget -O 5 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-pass.sh"
+wget -O 6 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-renew.sh"
+wget -O 7 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-del.sh"
+wget -O 8 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh"
+wget -O 9 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-expire-list.sh"
+wget -O 10 "https://raw.githubusercontent.com/doreimon1719/my-script/master/delete-user-expire.sh"
+wget -O 11 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-banned.sh"
+wget -O 12 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-unbanned.sh"
+wget -O 13 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-login.sh"
+wget -O 14 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userlimit.sh"
+wget -O 15 "https://raw.githubusercontent.com/doreimon1719/my-script/master/ps_mem.py"
+wget -O 16 "https://raw.githubusercontent.com/doreimon1719/my-script/master/resvis.sh"
+wget -O 17 "https://raw.githubusercontent.com/doreimon1719/my-script/master/speedtest_cli.py"
+wget -O 18 "https://raw.githubusercontent.com/sdoreimon1719/my-script/master/benchmark.sh"
+wget -O 19 "https://raw.githubusercontent.com/doreimon1719/my-script/master/info.sh"
+wget -O 20 "https://raw.githubusercontent.com/doreimon1719/my-script/master/about.sh"
+wget -O 21 "https://raw.githubusercontent.com/doreimon1719/my-script/master/rebootserver.sh"
+wget -O userlimit.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/userlimit.sh"
+wget -O userexpired.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh"
 echo "0 0 * * * root /usr/bin/reboot" > /etc/cron.d/reboot
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 echo "0 */12 * * * root /usr/bin/userexpired.sh" > /etc/cron.d/userexpired.sh
