@@ -11,9 +11,9 @@ echo "==================================================================="
 echo ""
 IP=`dig +short myip.opendns.com @resolver1.opendns.com`
 
-Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
+Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c2`
 hari="1"
-Pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
+Pass=`</dev/urandom tr -dc a-f0-9 | head -c3`
 
 useradd -e `date -d "$hari days" +"%Y-%m-%d"` -s /bin/false -M $Login
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
