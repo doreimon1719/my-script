@@ -6,7 +6,7 @@
 cd
 clear
 echo "==================================================================="
-echo -e "   MEMADAM AKAUN YANG SUDAH EXPIRE | MENU SCRIPT BY syahz86  "
+echo -e "   Delete Existing Expired Account "
 echo "==================================================================="
 echo -e ""
 echo "" > /root/infouser.txt
@@ -32,16 +32,16 @@ do
 		username=$username" "
 	done
 	bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
-	echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/alluser.txt
+	echo " Account : $username Expire ON : $tgl $bulantahun" >> /root/alluser.txt
 	todaystime=`date +%s`
 	if [ $userexpireinseconds -ge $todaystime ]; then
-		echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/activeuser.txt
+		echo " Account : $username Expire ON : $tgl $bulantahun" >> /root/activeuser.txt
 		timeto7days=$(( $todaystime + 604800 ))
 		if [ $userexpireinseconds -le $timeto7days ]; then
-			echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/infouser.txt
+			echo " Account : $username Expire ON : $tgl $bulantahun" >> /root/infouser.txt
 		fi
 	else
-		echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/expireduser.txt
+		echo " Account : $username Expire ON : $tgl $bulantahun" >> /root/expireduser.txt
 		passwd -l $username
 		userdel $username
 	fi
