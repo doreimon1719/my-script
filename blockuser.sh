@@ -23,10 +23,10 @@ do
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo "-------------------------------"
-echo "Jumlah akaun: $JUMLAH user"
+echo "Total account: $JUMLAH user"
 echo "-------------------------------"
 
-read -p "Akaun pelanggan yang akan di Ban: " Nama
+read -p "Client account to be Banned: " Nama
 passwd -l $Nama
 echo ""
 echo "==================================================================="
