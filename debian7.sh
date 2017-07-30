@@ -76,7 +76,7 @@ echo 'echo -e "      #                                                      #"' 
 echo 'echo -e "      #          CREDIT TO THE ORIGINAL DEVELOPER            #"' >> .bashrc
 echo 'echo -e "      ########################################################"' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
-echo 'echo -e "      Please tyep "menu" and press enter to start          :  "' >> .bashrc
+echo 'echo -e "      Please type "menu" and press enter to start          :  "' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
 
 # install webserver
@@ -361,19 +361,17 @@ service webmin restart
 
 # info
 clear
-echo "===========================================" | tee -a log-install.txt
-echo "        Autoscript ini mengandungi:        " | tee log-install.txt
-echo "===========================================" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "Servis"  | tee -a log-install.txt
-echo "------"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
-echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
-echo "Dropbear : 80, 443"  | tee -a log-install.txt
-echo "Squid3   : 8080, 3128 (limit to IP SSH)"  | tee -a log-install.txt
-echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "Tools"  | tee -a log-install.txt
+
+#echo ""  | tee -a log-install.txt
+#echo "Servis"  | tee -a log-install.txt
+#echo "------"  | tee -a log-install.txt
+#echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
+#echo "OpenSSH  : 22, 143"  | tee -a log-install.txt
+#echo "Dropbear : 80, 443"  | tee -a log-install.txt
+#echo "Squid3   : 8080, 3128 (limit to IP SSH)"  | tee -a log-install.txt
+#echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
+#echo ""  | tee -a log-install.txt
+#echo "Tools"  | tee -a log-install.txt
 echo "-----"  | tee -a log-install.txt
 echo "axel"  | tee -a log-install.txt
 echo "bmon"  | tee -a log-install.txt
@@ -394,10 +392,10 @@ echo "IPv6     : [off]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Maklumat Tambahan"  | tee -a log-install.txt
 echo "-----------------"  | tee -a log-install.txt
-echo "1) VPS AUTO REBOOT JAM 12 TENGAH MALAM"  | tee -a log-install.txt
-echo "2) AUTO LOCK USER EXPIRED SETIAP 12 JAM"  | tee -a log-install.txt
+echo "1) VPS AUTO REBOOT EVERY 12 MIDNIGHT"  | tee -a log-install.txt
+echo "2) AUTO LOCK USER EXPIRED EVERY 12 hours"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "Original Script by syahz86 | GollumVPN"  | tee -a log-install.txt
+#echo "Original Script by syahz86 | GollumVPN"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Installation log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
