@@ -65,10 +65,16 @@ apt-get install figlet
 echo "clear" >> .bashrc
 echo 'echo -e ""' >> .bashr
 echo 'echo -e ""' >> .bashrc
-echo 'figlet -k "            RGC-VPN"' >> .bashrc
+echo 'figlet -k "           RGC-VPN"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
-echo 'echo -e "     ========================================================="' >> .bashrc
-echo 'echo -e "     *        Original Script By syahz86 | GollumVPN        *"' >> .bashrc
+echo 'echo -e "      ########################################################"' >> .bashrc
+echo 'echo -e "      #                                                      #"' >> .bashrc
+echo 'echo -e "      #             MODED by   RAYMUND1719.PH                #"' >> .bashrc
+echo 'echo -e "      #                                                      #"' >> .bashrc
+echo 'echo -e "      #                                                      #"' >> .bashrc
+echo 'echo -e "      #                                                      #"' >> .bashrc
+echo 'echo -e "      #          CREDIT TO THE ORIGINAL DEVELOPER            #"' >> .bashrc
+echo 'echo -e "      ########################################################"' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
 echo 'echo -e " Please enter your option:  "' >> .bashrc
