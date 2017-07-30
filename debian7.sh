@@ -76,8 +76,8 @@ echo 'echo -e "      #                                                      #"' 
 echo 'echo -e "      #          CREDIT TO THE ORIGINAL DEVELOPER            #"' >> .bashrc
 echo 'echo -e "      ########################################################"' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
+echo 'echo -e "      Please tyep "menu" and press enter to start          :  "' >> .bashrc
 echo 'echo -e "     ========================================================="' >> .bashrc
-echo 'echo -e " Please enter your option:  "' >> .bashrc
 
 # install webserver
 cd
