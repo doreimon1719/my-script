@@ -16,8 +16,10 @@ hari="1"
 Pass=`</dev/urandom tr -dc a-f0-9 | head -c3`
 
 useradd -e `date -d "$hari days" +"%Y-%m-%d"` -s /bin/false -M $Login
+echo "============ Trial User created Successful =============="
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
+echo "==================================================================="
 #echo -e "====Trial akaun SSH===="
 #echo -e "Host: $IP" 
 #echo -e "Port OpenSSH: 22,143"
