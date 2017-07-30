@@ -3,10 +3,11 @@
 cd
 clear
 echo ""
-echo -e "==================================================================="
-echo -e "             CREDIT TO THE ORIGINAL SCRIPT WRITER (SYAHZ)           "
-echo -e "==================================================================="
-echo -e "\033[1;31m 1\033[0m) [1;32mCreate user account\033[0m"
+#echo -e "==================================================================="
+#echo -e "             CREDIT TO THE ORIGINAL SCRIPT WRITER (SYAHZ)           "
+echo -e "==============WELCOME to RAYMUND1719.PH AutoScript =================="
+echo -e ""
+echo -e "\033[1;31m 1\033[0m) Create new user              | \033[1;32m (name, pass, days)\033[0m"
 echo -e "\033[1;31m 2\033[0m) [1;32mCreate trial account\033[0m"
 echo -e "\033[1;31m 3\033[0m) [1;32mGenerate user account\033[0m"
 echo -e "\033[1;31m 4\033[0m) [1;32mUser account list\033[0m"
