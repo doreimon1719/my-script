@@ -67,17 +67,17 @@ echo 'echo -e ""' >> .bashr
 echo 'echo -e ""' >> .bashrc
 echo 'figlet -k "           RGC-VPN"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
-echo 'echo -e "      ########################################################"' >> .bashrc
-echo 'echo -e "      #                                                      #"' >> .bashrc
-echo 'echo -e "      #             MODED by   RAYMUND1719.PH                #"' >> .bashrc
-echo 'echo -e "      #                                                      #"' >> .bashrc
-echo 'echo -e "      #                                                      #"' >> .bashrc
-echo 'echo -e "      #                                                      #"' >> .bashrc
-echo 'echo -e "      #          CREDIT TO THE ORIGINAL DEVELOPER            #"' >> .bashrc
-echo 'echo -e "      ########################################################"' >> .bashrc
-echo 'echo -e "     ========================================================="' >> .bashrc
-echo 'echo -e "      Please type "menu" and press enter to start          :  "' >> .bashrc
-echo 'echo -e "     ========================================================="' >> .bashrc
+echo 'echo -e "      ##################################################"' >> .bashrc
+echo 'echo -e "      #                                                #"' >> .bashrc
+echo 'echo -e "      #          MODED by   RAYMUND1719.PH             #"' >> .bashrc
+echo 'echo -e "      #                                                #"' >> .bashrc
+echo 'echo -e "      #                                                #"' >> .bashrc
+echo 'echo -e "      #                                                #"' >> .bashrc
+echo 'echo -e "      #       CREDIT TO THE ORIGINAL DEVELOPER         #"' >> .bashrc
+echo 'echo -e "      ##################################################"' >> .bashrc
+echo 'echo -e "     ===================================================="' >> .bashrc
+echo 'echo -e "      Please type "menu" and press enter to start      : "' >> .bashrc
+echo 'echo -e "     ===================================================="' >> .bashrc
 
 # install webserver
 cd
@@ -238,17 +238,9 @@ wget -O 8 "https://raw.githubusercontent.com/doreimon1719/my-script/master/delet
 wget -O 9 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-pass.sh"  ##5
 wget -O 10 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-gen.sh"  ##3
 wget -O 11 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userlimit.sh"  ##14
-
-
-
-
-wget -O 8 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh"
-wget -O 9 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-expire-list.sh"
-
-
-
-wget -O 13 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-login.sh"
-
+wget -O 12 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-login.sh"  ##13
+wget -O 13 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh" ##8
+wget -O 14 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-expire-list.sh" ##9
 wget -O 15 "https://raw.githubusercontent.com/doreimon1719/my-script/master/ps_mem.py"
 wget -O 16 "https://raw.githubusercontent.com/doreimon1719/my-script/master/resvis.sh"
 wget -O 17 "https://raw.githubusercontent.com/doreimon1719/my-script/master/speedtest_cli.py"
