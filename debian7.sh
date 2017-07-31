@@ -231,17 +231,21 @@ wget -O 1 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-
 wget -O 2 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-renew.sh"  ##6
 wget -O 3 "https://raw.githubusercontent.com/doreimon1719/my-script/master/trial.sh"	   ##2
 wget -O 4 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-del.sh"	   ##7
+wget -O 5 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-banned.sh" ##11
+wget -O 6 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-unbanned.sh" ##12
+
+wget -O 8 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-list.sh"   ##4
 
 wget -O 3 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-gen.sh"
-wget -O 4 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-list.sh"
+
 wget -O 5 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-pass.sh"
 
 
 wget -O 8 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh"
 wget -O 9 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-expire-list.sh"
 wget -O 10 "https://raw.githubusercontent.com/doreimon1719/my-script/master/delete-user-expire.sh"
-wget -O 11 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-banned.sh"
-wget -O 12 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-unbanned.sh"
+
+
 wget -O 13 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-login.sh"
 wget -O 14 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userlimit.sh"
 wget -O 15 "https://raw.githubusercontent.com/doreimon1719/my-script/master/ps_mem.py"
