@@ -12,9 +12,12 @@ echo -e "\033[1;31m  2\033[0m) User renew                   |   (name, days exte
 echo -e "\033[1;31m  3\033[0m) Create trial account         |   (user trial) "           ##2 originally
 echo -e "\033[1;31m  4\033[0m) Delete user account          |   (Delete user) "          ##7 originally 
 echo -e "\033[1;31m  5\033[0m) Lock user account            |   (Block user) "           ##11 originally 
+echo -e "\033[1;31m  6\033[0m) Unlock user account          |   (Unblock user) "         ##12
+
+echo -e "\033[1;31m  8\033[0m) User account list            |   (all users' list) "       ##4
 
 echo -e "\033[1;31m  3\033[0m) Generate user account        |   (fast create user-pass) "
-echo -e "\033[1;31m  4\033[0m) User account list            |   (all users' list) "
+
 echo -e "\033[1;31m  5\033[0m) Change user password         |   (change pass of user) "
 
 
@@ -22,7 +25,7 @@ echo -e "\033[1;31m 8\033[0m) Sekat akaun yang sudah expire        | \033[1;32mD
 echo -e "\033[1;31m 9\033[0m) Senarai akaun yang sudah expire      | \033[1;32mUser expire list\033[0m"
 echo -e "\033[1;31m10\033[0m) Memadam akaun yang sudah expire      | \033[1;32mDelete user expire\033[0m"
 
-echo -e "\033[1;31m12\033[0m) Buka sekatan akaun pelanggan         | \033[1;32mUnblock user account\033[0m"
+
 echo -e "\033[1;31m13\033[0m) Senarai akaun yang sedang login      | \033[1;32mUser active list\033[0m"
 echo -e "\033[1;31m14\033[0m) Sekat multilogin (manual)            | \033[1;32mKill multilogin manual\033[0m"
 echo -e "\033[1;31m15\033[0m) Jumlah RAM yang sedang digunakan     | \033[1;32mTotal used RAM\033[0m"
