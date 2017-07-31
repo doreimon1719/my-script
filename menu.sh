@@ -13,12 +13,11 @@ echo -e "\033[1;31m  3\033[0m) Create trial account         |   (user trial) "  
 echo -e "\033[1;31m  4\033[0m) Delete user account          |   (Delete user) "          ##7 originally 
 echo -e "\033[1;31m  5\033[0m) Lock user account            |   (Block user) "           ##11 originally 
 echo -e "\033[1;31m  6\033[0m) Unlock user account          |   (Unblock user) "         ##12
-
-echo -e "\033[1;31m  8\033[0m) User account list            |   (all users' list) "       ##4
-echo -e "\033[1;31m  9\033[0m) User expire list             |   (user expire list)  "     ##10
-echo -e "\033[1;31m 10\033[0m) Change user password         |   (change pass of user) "   ##5
-echo -e "\033[1;31m 11\033[0m) Generate user account         |   (fast create user-pass) " ##3
-echo -e "\033[1;31m 12\033[0m) Manual Kill multilogin               |  (user limit to 1) "  ##14
+echo -e "\033[1;31m  7\033[0m) User account list            |   (all users' list) "       ##4
+echo -e "\033[1;31m  8\033[0m) User expire list             |   (user expire list)  "     ##10
+echo -e "\033[1;31m  9\033[0m) Change user password         |   (change pass of user) "   ##5
+echo -e "\033[1;31m 10\033[0m) Generate user account        |   (fast create user-pass) " ##3
+echo -e "\033[1;31m 11\033[0m) Manual Kill multilogin       |  (user limit to 1) "  ##14
 
 
 
