@@ -228,12 +228,15 @@ service webmin restart
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/doreimon1719/my-script/master/menu.sh"
 wget -O 1 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-add.sh"
-wget -O 2 "https://raw.githubusercontent.com/doreimon1719/my-script/master/trial.sh"
+wget -O 2 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-renew.sh"  ##6
+wget -O 3 "https://raw.githubusercontent.com/doreimon1719/my-script/master/trial.sh"	   ##2
+wget -O 4 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-del.sh"	   ##7
+
 wget -O 3 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-gen.sh"
 wget -O 4 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-list.sh"
 wget -O 5 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-pass.sh"
-wget -O 6 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-renew.sh"
-wget -O 7 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-del.sh"
+
+
 wget -O 8 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh"
 wget -O 9 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-expire-list.sh"
 wget -O 10 "https://raw.githubusercontent.com/doreimon1719/my-script/master/delete-user-expire.sh"
