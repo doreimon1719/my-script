@@ -5,7 +5,7 @@ clear
 echo ""
 #echo -e "==================================================================="
 #echo -e "             CREDIT TO THE ORIGINAL SCRIPT WRITER (SYAHZ)           "
-echo -e "==============WELCOME to RAYMUND1719.PH AutoScript =================="
+echo -e "===========  WELCOME to RAYMUND1719.PH AutoScript  ================="
 echo -e ""
 echo -e "\033[1;31m  1\033[0m) Create new user              |   (name, pass, days) "
 echo -e "\033[1;31m  2\033[0m) User renew                   |   (name, days extended) "  ##6 originally
@@ -29,5 +29,5 @@ echo -e "\033[1;31m 19\033[0m) VPS system info"
 echo -e "\033[1;31m 20\033[0m) Info script auto install     | (Auto install script info) "
 echo -e "\033[1;31m 21\033[0m) Reboot server                | (Reboot server) "
 echo -e ""
-echo -e "PLEASE ENTER YOUR OPTION NUMBER"
+echo  "PLEASE ENTER YOUR OPTION NUMBER: "
 
