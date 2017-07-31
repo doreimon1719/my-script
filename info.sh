@@ -1,24 +1,8 @@
 #!/bin/bash
-#####################################################################
-# Benchmark Script 2 by Hidden Refuge from FreeVPS                  #
-# Copyright(C) 2015 - Hidden Refuge                                 #
-# License: GNU General Public License 3.0                           #
-# Github: https://github.com/hidden-refuge/bench-sh-2               #
-#####################################################################
-# Original script by akamaras/camarg                                #
-# Original: http://www.akamaras.com/linux/linux-server-info-script/ #
-# Original Copyright (C) 2011 by akamaras/camarg                    #
-#####################################################################
-# The speed test was added by dmmcintyre3 from FreeVPS.us as a      #
-# modification to the original script.                              #
-# Modded Script: https://freevps.us/thread-2252.html                # 
-# Copyright (C) 2011 by dmmcintyre3 for the modification            #
-#####################################################################
+
 cd
 clear
-echo "==================================================================="
-echo -e "           MAKLUMAT SISTEM | MENU SCRIPT BY syahz86          "
-echo "==================================================================="
+
 echo ""
 sysinfo () {
 	# Removing existing bench.log
@@ -149,7 +133,3 @@ case $1 in
 	*)
 		sysinfo;;
 esac
-#################################################################################
-# Contributors:									#
-# thirthy_speed https://freevps.us/thread-16943-post-191398.html#pid191398 	#
-#################################################################################
