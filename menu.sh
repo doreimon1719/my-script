@@ -17,27 +17,17 @@ echo -e "\033[1;31m  7\033[0m) User account list            |   (all users' list
 echo -e "\033[1;31m  8\033[0m) User expire list             |   (user expire list)  "     ##10
 echo -e "\033[1;31m  9\033[0m) Change user password         |   (change pass of user) "   ##5
 echo -e "\033[1;31m 10\033[0m) Generate user account        |   (fast create user-pass) " ##3
-echo -e "\033[1;31m 11\033[0m) Manual Kill multilogin       |  (user limit to 1) "  ##14
-
-
-
-echo -e "\033[1;31m \033[0m) Disable user expire            |   ( user no expiry) " ##8
-
-echo -e "\033[1;31m \033[0m) Delete user expire            |   ( Delete expired user/s) " ##10
-
-
-echo -e "\033[1;31m13\033[0m) Senarai akaun yang sedang login      | \033[1;32mUser active list\033[0m"
-
-echo -e "\033[1;31m15\033[0m) Jumlah RAM yang sedang digunakan     | \033[1;32mTotal used RAM\033[0m"
-echo -e "\033[1;31m16\033[0m) Restart semua servis                 | \033[1;32mRestart all service\033[0m"
-echo -e "\033[1;31m17\033[0m) Speedtest VPS                        | \033[1;32mSpeedtest --share\033[0m"
-echo -e "\033[1;31m18\033[0m) Benchmark                            | \033[1;32mBenchmark\033[0m"
-echo -e "\033[1;31m19\033[0m) Maklumat Sistem VPS                  | \033[1;32mVPS system info\033[0m"
-echo -e "\033[1;31m20\033[0m) Info script auto install             | (Auto install script info) "
-echo -e "\033[1;31m21\033[0m) Reboot server                        | (Reboot server) "
-echo -e "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
-echo -e "==================================================================="
+echo -e "\033[1;31m 11\033[0m) Manual Kill multilogin       |   (user limit to 1) "  ##14
+echo -e "\033[1;31m 12\033[0m) User active list             |   (user active list) "  #13
+echo -e "\033[1;31m 13\033[0m) Disable user expire          |   (user no expiry) " ##8
+echo -e "\033[1;31m 14\033[0m) Delete user expire           |   (Delete expired user/s) " ##10
+echo -e "\033[1;31m 15\033[0m) Total used RAM               |   (User Data USed) "
+echo -e "\033[1;31m 16\033[0m) Restart all service"
+echo -e "\033[1;31m 17\033[0m) Speedtest VPS      "
+echo -e "\033[1;31m 18\033[0m) Benchmark          "
+echo -e "\033[1;31m 19\033[0m) VPS system info"
+echo -e "\033[1;31m 20\033[0m) Info script auto install     | (Auto install script info) "
+echo -e "\033[1;31m 21\033[0m) Reboot server                | (Reboot server) "
 echo -e ""
 echo -e "PLEASE ENTER YOUR OPTION NUMBER"
 
