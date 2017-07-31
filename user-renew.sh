@@ -1,7 +1,6 @@
 #
 #!/bin/bash
-#Script menambah masa aktif akaun SSH
-#Script by syahz86
+
 #
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
@@ -9,9 +8,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd
 clear
-echo "==================================================================="
-echo -e "  TAMBAH MASA AKTIF AKAUN PELANGGAN | MENU SCRIPT BY syahz86 "
-echo "==================================================================="
+echo ""
 echo ""
 # begin of user-list
 echo "-------------------------------------------------------------------"
@@ -30,12 +27,12 @@ echo "-------------------------------------------------------------------"
 echo ""
 # end of user-list
 
-read -p "Masukkan username: " username
+read -p "Enter username you to renew : " username
 
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
 	#read -p "Isikan password akun [$username]: " password
-	read -p "Berapa hari akaun [$username] aktif: " AKTIF
+	read -p "How many days [$username] active: " AKTIF
 	
 	expiredate=$(chage -l $username | grep "Account expires" | awk -F": " '{print $2}')
 	today=$(date -d "$expiredate" +"%Y-%m-%d")
@@ -47,21 +44,19 @@ if [ $? -eq 0 ]; then
 	echo "-------------------------------------------------------------------"
 	echo "Data Login:"
 	echo "-------------------------------------------------------------------"
-	echo "Host/IP: $MYIP"
-	echo "Dropbear Port: 443, 110, 109"
-	echo "OpenSSH Port: 22, 143"
-	echo "Squid Proxy: 80, 8080, 3128"
-	echo "OpenVPN Config: http://$MYIP:81/client.ovpn"
-	echo "Username: $username"
-	#echo "Password: $password"
-	echo "Aktif sehingga: $(date -d "$today + $AKTIF days" +"%d-%m-%Y")"
+	##echo "Host/IP: $MYIP"
+	##echo "Dropbear Port: 443, 110, 109"
+	##echo "OpenSSH Port: 22, 143"
+	##echo "Squid Proxy: 80, 8080, 3128"
+	##echo "OpenVPN Config: http://$MYIP:81/client.ovpn"
+	##echo "Username: $username"
+	echo "Password: $password"
+	echo "Account active up to: $(date -d "$today + $AKTIF days" +"%d-%m-%Y")"
 	echo "-------------------------------------------------------------------"
 else
-	echo "Username [$username] belum didaftarkan lagi!"
+	echo "Username [$username] not yet registered!"
 echo -e ""
-echo "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
-echo "==================================================================="
+
 echo -e ""
 	exit 1
 
