@@ -10,7 +10,7 @@
 
 # 2017 (support Debian 7 32/64 bit)
 ```
-wget https://raw.githubusercontent.com/syahz86/autoscript/master/debian7.sh && chmod +x ./debian7.sh && ./debian7.sh
+wget https://raw.githubusercontent.com/doreimon1719/my-script/master/debian7.sh && chmod +x ./debian7.sh && ./debian7.sh
 ```
 ###### BAIK PUNYA CILOK (COPY & PASTE)
 =================================================================================
