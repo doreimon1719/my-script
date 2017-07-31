@@ -5,9 +5,7 @@
 #
 cd
 clear
-echo "==================================================================="
-echo -e "       PADAM AKAUN PELANGGAN | MENU SCRIPT BY syahz86        "
-echo "==================================================================="
+
 echo -e ""
 # begin of user-list
 echo "-------------------------------------------------------------------"
@@ -27,27 +25,25 @@ echo "-------------------------------------------------------------------"
 echo ""
 # end of user-list
 
-read -p "Masukkan username yang ingin dipadam: " username
+read -p "Enter the username you want to delete: " username
 
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
 	echo ""
-	read -p "Adakah anda benar-benar ingin memadam akaun [$username] [y/n]: " -e -i y REMOVE
+	read -p "Do you really want to delete the account [$username] [y/n]: " -e -i y REMOVE
 	if [[ "$REMOVE" = 'y' ]]; then
 		passwd -l $username
 		userdel $username
 		echo ""
-		echo "Akaun [$username] berjaya dipadam!"
+		echo "Account [$username] Deleted successfully!"
 	else
 		echo ""
-		echo "Pemadaman akaun [$username] dibatalkan!"
+		echo "Account deletion [$username] cancelled!"
 	fi
 else
-	echo "Username [$username] belum didaftarkan lagi!"
+	echo "Username [$username] Not yet registered!"
   echo -e ""
-echo "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
-echo "==================================================================="
+
 echo -e ""
 
 	exit 1
