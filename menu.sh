@@ -15,14 +15,16 @@ echo -e "\033[1;31m  5\033[0m) Lock user account            |   (Block user) "  
 echo -e "\033[1;31m  6\033[0m) Unlock user account          |   (Unblock user) "         ##12
 
 echo -e "\033[1;31m  8\033[0m) User account list            |   (all users' list) "       ##4
+echo -e "\033[1;31m  9\033[0m) User expire list             |   (user expire list)  "     ##10
+echo -e "\033[1;31m 10\033[0m) Change user password         |   (change pass of user) "   ##5
 
 echo -e "\033[1;31m  3\033[0m) Generate user account        |   (fast create user-pass) "
 
-echo -e "\033[1;31m  5\033[0m) Change user password         |   (change pass of user) "
+
 
 
 echo -e "\033[1;31m 8\033[0m) Sekat akaun yang sudah expire        | \033[1;32mDisable user expire\033[0m"
-echo -e "\033[1;31m 9\033[0m) Senarai akaun yang sudah expire      | \033[1;32mUser expire list\033[0m"
+
 echo -e "\033[1;31m10\033[0m) Memadam akaun yang sudah expire      | \033[1;32mDelete user expire\033[0m"
 
 
