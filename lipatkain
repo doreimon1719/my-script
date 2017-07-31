@@ -1,29 +1,32 @@
 # download script
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/syahz86/autoscript/master/menu.sh"
-wget -O 1 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-add.sh"
-wget -O 2 "https://raw.githubusercontent.com/syahz86/autoscript/master/trial.sh"
-wget -O 3 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-gen.sh"
-wget -O 4 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-list.sh"
-wget -O 5 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-pass.sh"
-wget -O 6 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-renew.sh"
-wget -O 7 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-del.sh"
-wget -O 8 "https://raw.githubusercontent.com/syahz86/autoscript/master/userexpired.sh"
-wget -O 9 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-expire-list.sh"
-wget -O 10 "https://raw.githubusercontent.com/syahz86/autoscript/master/delete-user-expire.sh"
-wget -O 11 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-banned.sh"
-wget -O 12 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-unbanned.sh"
-wget -O 13 "https://raw.githubusercontent.com/syahz86/autoscript/master/user-login.sh"
-wget -O 14 "https://raw.githubusercontent.com/syahz86/autoscript/master/ps_mem.py"
-wget -O 15 "https://raw.githubusercontent.com/syahz86/autoscript/master/resvis.sh"
-wget -O 16 "https://raw.githubusercontent.com/syahz86/autoscript/master/speedtest_cli.py"
-wget -O 17 "https://raw.githubusercontent.com/syahz86/autoscript/master/benchmark.sh"
-wget -O 18 "https://raw.githubusercontent.com/syahz86/autoscript/master/info.sh"
-wget -O 19 "https://raw.githubusercontent.com/syahz86/autoscript/master/about.sh"
-wget -O 20 "https://raw.githubusercontent.com/syahz86/autoscript/master/rebootserver.sh"
-wget -O userlimit.sh "https://raw.githubusercontent.com/syahz86/autoscript/master/userlimit.sh"
-wget -O autokill.sh "https://raw.githubusercontent.com/syahz86/autoscript/master/autokill.sh"
-wget -O userexpired.sh "https://raw.githubusercontent.com/syahz86/autoscript/master/userexpired.sh"
+wget -O menu "https://raw.githubusercontent.com/doreimon1719/my-script/master/menu.sh"
+wget -O 1 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-add.sh"
+wget -O 2 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-renew.sh"  ##6
+wget -O 3 "https://raw.githubusercontent.com/doreimon1719/my-script/master/trial.sh"	   ##2
+wget -O 4 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-del.sh"	   ##7
+wget -O 5 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-banned.sh" ##11
+wget -O 6 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-unbanned.sh" ##12
+wget -O 7 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-list.sh"   ##4
+wget -O 8 "https://raw.githubusercontent.com/doreimon1719/my-script/master/delete-user-expire.sh"  ##10
+wget -O 9 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-pass.sh"  ##5
+wget -O 10 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-gen.sh"  ##3
+wget -O 11 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userlimit.sh"  ##14
+wget -O 12 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-login.sh"  ##13
+wget -O 13 "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh" ##8
+wget -O 14 "https://raw.githubusercontent.com/doreimon1719/my-script/master/user-expire-list.sh" ##9
+wget -O 15 "https://raw.githubusercontent.com/doreimon1719/my-script/master/ps_mem.py"
+wget -O 16 "https://raw.githubusercontent.com/doreimon1719/my-script/master/resvis.sh"
+wget -O 17 "https://raw.githubusercontent.com/doreimon1719/my-script/master/speedtest_cli.py"
+wget -O 18 "https://raw.githubusercontent.com/sdoreimon1719/my-script/master/benchmark.sh"
+wget -O 19 "https://raw.githubusercontent.com/doreimon1719/my-script/master/info.sh"
+wget -O 20 "https://raw.githubusercontent.com/doreimon1719/my-script/master/about.sh"
+wget -O 21 "https://raw.githubusercontent.com/doreimon1719/my-script/master/rebootserver.sh"
+wget -O userlimit.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/userlimit.sh"
+wget -O autokill.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/autokill.sh"
+wget -O userexpired.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh"
+
+
 
 echo "@reboot root /usr/bin userexpired.sh" > /etc/cron.d/userexpired
 echo "@reboot root /usr/bin userlimit.sh" > /etc/cron.d/userlimit
