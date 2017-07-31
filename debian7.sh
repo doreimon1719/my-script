@@ -65,7 +65,7 @@ apt-get install figlet
 echo "clear" >> .bashrc
 echo 'echo -e ""' >> .bashr
 echo 'echo -e ""' >> .bashrc
-echo 'figlet -k "           RGC-VPN"' >> .bashrc
+echo 'figlet -k "         RGC-VPN"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
 echo 'echo -e "      ##################################################"' >> .bashrc
 echo 'echo -e "      #                                                #"' >> .bashrc
@@ -75,10 +75,11 @@ echo 'echo -e "      #                                                #"' >> .ba
 echo 'echo -e "      #                                                #"' >> .bashrc
 echo 'echo -e "      #       CREDIT TO THE ORIGINAL DEVELOPER         #"' >> .bashrc
 echo 'echo -e "      ##################################################"' >> .bashrc
+echo 'echo -e ""
 echo 'echo -e "     ===================================================="' >> .bashrc
 echo 'echo -e "      Please type "menu" and press enter to start      : "' >> .bashrc
 echo 'echo -e "     ===================================================="' >> .bashrc
-
+echo 'echo -e ""
 # install webserver
 cd
 rm /etc/nginx/sites-enabled/default
