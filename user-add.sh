@@ -8,12 +8,18 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd
 clear
+
 echo -e ""
 echo -e ""
+
 read -p "Username : " username
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
 	echo "Username [$username] already exists!"
+	echo -e ""
+	echo -e ""
+	echo -e "Exiting..."
+	
 	exit 1
 else
 	read -p "Password [$username] : " password
@@ -21,7 +27,7 @@ else
 	today="$(date +"%Y-%m-%d")"
 	expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
 	useradd -M -N -s /bin/false -e $expire $username
-	echo $username:$password | chpasswd
+	echo $username: $password   #| chpasswd <----originally used
 	echo ""
 	echo "-------------------------------------------------------------------"
 	echo "Data Login:"
