@@ -3,8 +3,24 @@
 cd
 clear
 echo ""
-#echo -e "==================================================================="
-#echo -e "             CREDIT TO THE ORIGINAL SCRIPT WRITER (SYAHZ)           "
+# Output of results
+	echo "System Info" | tee -a $HOME/bench.log
+	echo "-----------" | tee -a $HOME/bench.log
+	echo "Processor	: $cname" | tee -a $HOME/bench.log
+	echo "CPU Cores	: $cores" | tee -a $HOME/bench.log
+	echo "Frequency	: $freq MHz" | tee -a $HOME/bench.log
+	echo "Memory		: $tram MB" | tee -a $HOME/bench.log
+	echo "Swap		: $vram MB" | tee -a $HOME/bench.log
+	echo "Uptime		: $up" | tee -a $HOME/bench.log
+	echo "" | tee -a $HOME/bench.log
+	echo "OS		: $opsy" | tee -a $HOME/bench.log
+	echo "Arch		: $arch ($lbit Bit)" | tee -a $HOME/bench.log
+	echo "Kernel		: $kern" | tee -a $HOME/bench.log
+	echo "Hostname	: $hn" | tee -a $HOME/bench.log
+	echo "" | tee -a $HOME/bench.log
+	echo "" | tee -a $HOME/bench.log
+  
+
 echo -e "===========  WELCOME to RAYMUND1719.PH AutoScript  ================="
 echo -e ""
 echo -e "\033[1;31m  1\033[0m) Create new user              |   (name, pass, days) "
