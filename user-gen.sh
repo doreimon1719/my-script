@@ -10,7 +10,7 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd
 clear
 echo "==================================================================="
-echo -e "      GENERATE AKAUN PELANGGAN | MENU SCRIPT BY syahz86      "
+echo -e "      GENERATE CUSTOMER ACCOUNTS      "
 echo "==================================================================="
 echo -e ""
 read -p "How many accounts will be created: " JUMLAH
@@ -38,7 +38,4 @@ done
 
 echo "Active up to: $(date -d "$AKTIF days" +"%d-%m-%Y")"
 echo -e ""
-echo "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
-echo "==================================================================="
 echo -e ""
