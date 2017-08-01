@@ -47,6 +47,7 @@ sysinfo () {
 	echo "" | tee -a $HOME/bench.log
 	echo "" | tee -a $HOME/bench.log
 }
+echo "Menu Version 1.0.0"
 
 echo -e "===========  WELCOME to RAYMUND1719.PH AutoScript  ================="
 echo -e ""
