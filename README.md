@@ -1,4 +1,6 @@
- ## Autoscript VPS created by [Telegram: Si Tony](https://t.me/simuncaibetollah):shipit:
+ ## Autoscript VPS moded to English by Doreimon1719.
+ ## Credit to original developer where I copy the original scripts. KUDOZ to him.
+ ## I salute you Sir SYAHZ86
  
 ###### Operating software
 :computer:[Putty.exe for PC(64-bit)](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe)
@@ -12,5 +14,5 @@
 ```
 wget https://raw.githubusercontent.com/doreimon1719/my-script/master/debian7.sh && chmod +x ./debian7.sh && ./debian7.sh
 ```
-###### BAIK PUNYA CILOK (COPY & PASTE)
+###### (COPY & PASTE)
 =================================================================================
