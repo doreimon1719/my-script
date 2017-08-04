@@ -251,7 +251,7 @@ wget -O 20 "https://raw.githubusercontent.com/doreimon1719/my-script/master/abou
 wget -O 21 "https://raw.githubusercontent.com/doreimon1719/my-script/master/rebootserver.sh"
 wget -O userlimit.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/userlimit.sh"
 wget -O userexpired.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/userexpired.sh"
-wget -O generate-key.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/generate-key.sh"
+# wget -O generate-key.sh "https://raw.githubusercontent.com/doreimon1719/my-script/master/generate-key.sh"
 echo "0 0 * * * root /usr/bin/reboot" > /etc/cron.d/reboot
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 echo "0 */12 * * * root /usr/bin/userexpired.sh" > /etc/cron.d/userexpired.sh
