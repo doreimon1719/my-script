@@ -98,7 +98,7 @@ wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/doreimon1719/m
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-iptables -t nat -I POSTROUTING -s 108.61.161.41/81 -o eth0 -j MASQUERADE   #192.168.100.0/24
+iptables -t nat -I POSTROUTING -s 192.168.100.0/24 -o eth0 -j MASQUERADE   #192.168.100.0/24
 iptables-save > /etc/iptables_yg_baru_dibikin.conf
 wget -O /etc/network/if-up.d/iptables "https://raw.githubusercontent.com/doreimon1719/my-script/master/iptables"
 chmod +x /etc/network/if-up.d/iptables
