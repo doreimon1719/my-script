@@ -19,7 +19,7 @@ do
 	tuserval=`head -n $i /tmp/expirelist.txt | tail -n 1`
 	username=`echo $tuserval | cut -f1 -d:`
 	userexp=`echo $tuserval | cut -f2 -d:`
-	userexpireinseconds=$(( $userexp * 86400 ))
+	userexpireinseconds=$(( $userexp * 7200 ))  #4 hours trial
 	tglexp=`date -d @$userexpireinseconds`
 	tgl=`echo $tglexp |awk -F" " '{print $3}'`
 	while [ ${#tgl} -lt 2 ]
@@ -35,7 +35,7 @@ do
 	todaystime=`date +%s`
 	if [ $userexpireinseconds -ge $todaystime ]; then
 		echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/activeuser.txt
-		timeto7days=$(( $todaystime + 604800 ))
+		timeto7days=$(( $todaystime + 604800 ))  #7 days
 		if [ $userexpireinseconds -le $timeto7days ]; then
 			echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/infouser.txt
 		fi
