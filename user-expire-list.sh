@@ -12,7 +12,7 @@ do
 	tuserval=`head -n $i /tmp/expirelist.txt | tail -n 1`
 	username=`echo $tuserval | cut -f1 -d:`
 	userexp=`echo $tuserval | cut -f2 -d:`
-	userexpireinseconds=$(( $userexp * 86400 ))
+	userexpireinseconds=$(( $userexp * 7200 ))
 	tglexp=`date -d @$userexpireinseconds`
 	tgl=`echo $tglexp |awk -F" " '{print $3}'`
 	while [ ${#tgl} -lt 2 ]
@@ -24,7 +24,7 @@ do
 		username=$username" "
 	done
 	bulantahun=`echo $tglexp |awk -F" " '{print $2,$6}'`
-	echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/alluser.txt
+	echo " Account : $username Expire on : $tgl $bulantahun" >> /root/alluser.txt
 	todaystime=`date +%s`
 	if [ $userexpireinseconds -ge $todaystime ]; then
 		echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/activeuser.txt
@@ -33,19 +33,19 @@ do
 			echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/infouser.txt
 		fi
 	else
-		echo " Akaun : $username Expire pada : $tgl $bulantahun" >> /root/expireduser.txt
+		echo " Account : $username Expire ona : $tgl $bulantahun" >> /root/expireduser.txt
 		passwd -l $username
 	fi
 done
 cd
 clear
 echo "==================================================================="
-echo -e "  SENARAI AKAUN YANG SUDAH EXPIRE | MENU SCRIPT BY syahz86   "
+echo -e "  EXPIRE LIST OF ACCOUNTS    "
 echo "==================================================================="
 echo -e ""
 cat /root/expireduser.txt
 echo -e ""
 echo "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
+
 echo "==================================================================="
 echo -e ""
