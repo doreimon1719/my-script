@@ -1,7 +1,6 @@
 #
 #!/bin/bash
-#Script block akaun SSH
-#Script by syahz86
+
 #
 cd
 clear
