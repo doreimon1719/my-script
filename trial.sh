@@ -6,11 +6,11 @@ cd
 clear
 
 echo ""
-IP=`dig +short myip.opendns.com @resolver1.opendns.com`
+#IP=`dig +short myip.opendns.com @resolver1.opendns.com`
 
-Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c2`
+Login=trial`</dev/urandom tr -dc X-Z0-9 | fold -w 7 | head -n 1`
 hari="1"
-Pass=`</dev/urandom tr -dc a-f0-9 | head -c3`
+Pass=`</dev/urandom tr -dc a-f0-9 | fold -w 3 | head -n 1`
 
 useradd -e `date -d "$ how many days" +"%Y-%m-%d"` -s /bin/false -M $Login
 echo "============ Trial User created Successful =============="
