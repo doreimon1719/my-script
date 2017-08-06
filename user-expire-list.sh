@@ -1,7 +1,6 @@
 #
 #!/bin/bash
-#Script senarai user yang sudah expire akaunSSH
-#Script by syahz86
+
 #
 echo "" > /root/infouser.txt
 echo "" > /root/expireduser.txt
