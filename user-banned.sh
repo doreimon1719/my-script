@@ -5,7 +5,7 @@
 cd
 clear
 echo "==================================================================="
-echo -e "        SEKAT AKAUN PELANGGAN | MENU SCRIPT BY syahz86       "
+echo -e "        SECURE CUSTOMER ACCOUNTS        "
 echo "==================================================================="
 echo ""
 
@@ -27,26 +27,26 @@ echo "-------------------------------------------------------------------"
 echo ""
 # end of user-list
 
-read -p "Masukkan username yang ingin disekat: " username
+read -p "Enter the username you want to block: " username
 
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
 	echo ""
-	read -p "Adakah anda benar-benar ingin sekat akaun [$username] [y/n]: " -e -i y BANNED
+	read -p "Do you really want to block an account [$username] [y/n]: " -e -i y BANNED
 	if [[ "$BANNED" = 'y' ]]; then
-		echo " Akaun : $username" >> /root/banneduser.txt
+		echo " Account : $username" >> /root/banneduser.txt
 		passwd -l $username
 		echo ""
-		echo "Akaun [$username] berjaya disekat!"
+		echo "Account [$username] Successfully blocked!"
 	else
 		echo ""
-		echo "Sekatan akaun [$username] dibatalkan!"
+		echo "Account restrictions [$username] Canceled!"
 	fi
 else
-	echo "Username [$username] belum terdaftar!"
+	echo "Username [$username] Not yet registered!"
 	echo -e ""
 echo "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
+
 echo "==================================================================="
 echo -e ""
 
