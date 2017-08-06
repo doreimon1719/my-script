@@ -1,12 +1,11 @@
 #
 #!/bin/bash
-#Script limitkan login akaun SSH dropbear
-#Script by syahz86
+
 
 cd
 clear
-echo "==================================================================="
-echo -e "     MELIMITKAN LOGIN AKAUN SSH | MENU SCRIPT BY syahz86     "
+3echo "==================================================================="
+#echo -e "     MELIMITKAN LOGIN AKAUN SSH | MENU SCRIPT BY syahz86     "
 echo "==================================================================="
 echo ""
 PARAM=$1
@@ -83,8 +82,7 @@ case $PARAM in
 	echo " Taip (userlimit.sh 1) untuk melimitkan 1 login dropbear untuk 1 ID sahaja."
 	echo " Taip (userlimit.sh 2) untuk melimitkan 2 login dropbear untuk 1 ID"
 	echo ""
-echo "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
+
 echo "==================================================================="
 echo ""
 	rm -f /tmp/pid
