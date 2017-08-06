@@ -9,7 +9,7 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd
 clear
 echo "==================================================================="
-echo -e "      TUKAR PASSWORD PELANGGAN | MENU SCRIPT BY syahz86      "
+echo -e "      CHANGE CUSTOMER PASSWORD      "
 echo "==================================================================="
 echo -e ""
 # begin of user-list
@@ -30,16 +30,16 @@ echo "-------------------------------------------------------------------"
 echo ""
 # end of user-list
 
-read -p "Masukkan username: " username
+read -p "Entern username: " username
 
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
-	read -p "Password baru untuk akaun [$username]: " password
-	read -p "Sila masukkan semula password baru untuk akaun [$username]: " password1
+	read -p "New password for account [$username]: " password
+	read -p "Please re-enter the new password for the account [$username]: " password1
 	echo ""
 	if [[ $password = $password1 ]]; then
 		echo $username:$password | chpasswd
-		echo "Password untuk akaun [$username] berjaya diganti"
+		echo "Password for account [$username] Successfully replaced"
 		echo ""
 		echo "-------------------------------------------------------------------"
 		echo "Data Login:"
@@ -54,14 +54,14 @@ if [ $? -eq 0 ]; then
 		#echo "Valid s/d: $(date -d "$AKTIF days" +"%d-%m-%Y")"
 		echo "-------------------------------------------------------------------"
 	else
-		echo "Password untuk akaun [$username] gagal diganti"
-		echo "[Password baru] & [Konfirmasi password baru] tidak sama, sila cuba semula!"
+		echo "Password for account [$username] Failed to change"
+		echo "[New password] & [Confirm new password] Not the same, please try again!"
 	fi
 else
-	echo "Username [$username] belum didaftarkan lagi!"
+	echo "Username [$username] Not yet registered!"
   echo -e ""
 echo "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
+#echo -e "              SCRIPT BY syahz86 | GollumVPN              "
 echo "==================================================================="
 echo -e ""
 	exit 1
