@@ -1,7 +1,6 @@
 #
 #!/bin/bash
-#Script create akaun trial
-#Script by syahz86
+
 #
 cd
 clear
