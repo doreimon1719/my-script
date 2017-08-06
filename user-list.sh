@@ -1,8 +1,6 @@
 #
 #!/bin/bash
-#Script senarai user
-#Script by syahz86
-#
+
 cd
 clear
 echo "==================================================================="
