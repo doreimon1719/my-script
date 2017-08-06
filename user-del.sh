@@ -1,7 +1,6 @@
 #
 #!/bin/bash
-#Script delete akaunSSH
-#Script by syahz86
+
 #
 cd
 clear
