@@ -31,7 +31,7 @@ read -p "Enter username you to renew : " username
 
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
-	#read -p "Isikan password akun [$username]: " password
+	read -p "Isikan password akun [$username]: " password
 	read -p "How many days [$username] active: " AKTIF
 	
 	expiredate=$(chage -l $username | grep "Account expires" | awk -F": " '{print $2}')
