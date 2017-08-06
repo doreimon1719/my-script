@@ -1,7 +1,6 @@
 #
 #!/bin/bash
-#Script tukar password akaun SSH
-#Script by syahz86
+
 #
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
