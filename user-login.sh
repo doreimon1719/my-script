@@ -5,7 +5,7 @@
 cd
 clear
 echo "==================================================================="
-echo -e "SENARAI PELANGGAN YANG SEDANG LOGIN | MENU SCRIPT BY syahz86 " 
+echo -e "LIST OF CLIENT CUSTOMERS  " 
 echo "==================================================================="
 echo ""
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
@@ -45,6 +45,6 @@ echo " Kill multilogin dengan cara menaip kill -9 (nombor PID) "
 echo "-------------------------------------------------------------------"
 echo -e ""
 echo "==================================================================="
-echo -e "              SCRIPT BY syahz86 | GollumVPN              "
+
 echo "==================================================================="
 echo -e ""
